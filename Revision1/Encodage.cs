@@ -12,6 +12,8 @@ namespace Revision1
 {
     public partial class Encodage : Form
     {
+        //Change
+
         public Encodage()
         {
             InitializeComponent();
