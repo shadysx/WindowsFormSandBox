@@ -18,5 +18,7 @@ namespace BL
         {
             return DAL.DAL_SEC.Insert(sec);
         }
+
+
     }
 }

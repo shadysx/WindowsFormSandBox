@@ -16,7 +16,6 @@ namespace DAL
         {
             List<DTO.SEC> retVal = null;
 
-
             using (var connexion = CON_MANAGER.Connection)
                 ////= SQL directe
                 //try
@@ -31,13 +30,15 @@ namespace DAL
                 try
                 {
                     retVal = connexion.Query<DTO.SEC>("sp_sec_select_all", CommandType.StoredProcedure).ToList();
-
+                    Console.WriteLine(retVal);
                 }
                 catch (Exception ex)
                 {
                     throw ex;
                 }
             return retVal;
+
+            
         }
 
         public static int Insert(DTO.SEC sec)
