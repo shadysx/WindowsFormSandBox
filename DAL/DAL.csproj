@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CON_MANAGER.cs" />
+    <Compile Include="DAL_PRODUCT.cs" />
     <Compile Include="DAL_SEC.cs" />
     <Compile Include="DAL_TYP_ENS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

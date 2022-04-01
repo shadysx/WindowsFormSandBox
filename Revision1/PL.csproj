@@ -39,9 +39,6 @@
     <Reference Include="ComponentFactory.Krypton.Navigator">
       <HintPath>..\..\..\..\Downloads\Krypton\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>..\..\..\..\Downloads\Krypton\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
-    </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>..\..\..\..\Downloads\Krypton\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
@@ -84,6 +81,12 @@
     <Compile Include="Encodage.Designer.cs">
       <DependentUpon>Encodage.cs</DependentUpon>
     </Compile>
+    <Compile Include="DisplayProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayProducts.Designer.cs">
+      <DependentUpon>DisplayProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +107,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DisplayProducts.resx">
+      <DependentUpon>DisplayProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

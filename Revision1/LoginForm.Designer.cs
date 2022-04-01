@@ -69,11 +69,11 @@
             // 
             this.label1.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(61, 48);
+            this.label1.Location = new System.Drawing.Point(61, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(389, 104);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome ";
+            this.label1.Text = "Welcome";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // kryptonTextBox1
@@ -165,7 +165,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Revision1.Properties.Resources.logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(425, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(425, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(366, 361);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,6 +200,7 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
