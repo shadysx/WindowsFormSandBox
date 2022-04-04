@@ -36,12 +36,32 @@ namespace Revision1
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-
+            bool success = false;
+            if (kryptonTextBox1.Text == "admin" && kryptonTextBox2.Text == "password")
+            {
+                success = true;
+                MessageBox.Show("Welcome ");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Retry");
+            }
+            
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            
             this.ActiveControl = label1;
+
+            //login
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

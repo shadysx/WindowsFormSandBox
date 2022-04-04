@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CON_MANAGER.cs" />
+    <Compile Include="DAL_PICTURE.cs" />
+    <Compile Include="DAL_PRODUCT.cs" />
     <Compile Include="DAL_PRODUCT_JOIN_PICTURE.cs" />
     <Compile Include="DAL_SEC.cs" />
     <Compile Include="DAL_TYP_ENS.cs" />

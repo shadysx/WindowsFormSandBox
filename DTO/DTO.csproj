@@ -59,6 +59,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PICTURE.cs" />
+    <Compile Include="PRODUCT.cs" />
     <Compile Include="PRODUCT_JOIN_PICTURE.cs" />
     <Compile Include="SEC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

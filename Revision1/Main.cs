@@ -14,16 +14,23 @@ namespace Revision1
 {
     public partial class Main : KryptonForm
     {
-        bool admin = true;   
+        bool isAdmin = true;
 
         private Form activeChildForm;
         public Main()
         {
+            LoginForm form = new LoginForm();
+            form.ShowDialog();
+       
+ 
             InitializeComponent();
             CheckIfAdmin();
+
+            //Pop first child
+            OpenChildForm(new DisplayProductsV2());
         }
 
-        private void OpenChildForm(Form childForm, Button btnSender)
+        private void OpenChildForm(Form childForm)
         {
             this.activeChildForm = childForm;
 
@@ -37,11 +44,11 @@ namespace Revision1
 
         private void iconButtonShop_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new DisplayProductsV2(), (Button)sender);
+            OpenChildForm(new DisplayProductsV2());
         }
         private void CheckIfAdmin()
         {
-            if (admin == true)
+            if (isAdmin == true)
             {
                 iconButtonAdminPanel.Visible = true;
             }

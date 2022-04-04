@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using System.Windows.Forms;
+using DTO;
 
 
 namespace Test
@@ -13,41 +14,30 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            string name = "AMD RYZEN 5 3600";
-            string type = "CPU";
 
 
+            //All Lines
+            var products = DAL_PRODUCT.SelectAll();
+            var pictures = DAL_PICTURE.SelectAll();
 
-            
-            //All lines
+            var innerJoin = products.Join(// outer sequence 
+                      pictures,  // inner sequence 
+                      pro => pro.ID_PRODUCT,    // outerKeySelector
+                      pic => pic.ID_PRODUCT,  // innerKeySelector
+                      (pro, pic) => new  // result selector
+                      {
+                          ProductName = pro.PRODUCT_NAME,
+                          ProductType = pro.PRODUCT_TYPE,
+                          ProductDescription = pro.PRODUCT_TYPE,
+                          PicturesUrl = pic.PICTURE_URL
+                      });
 
-            var result = DAL.DAL_PRODUCT_JOIN_PICTURE.SelectAll();
+           
+            foreach (var item in innerJoin)
+                Console.WriteLine(item);
 
-            //Order
-
-            result = result.Where(x => x.PRODUCT_NAME.Contains(name)).ToList();
-
-            // filter result by name
-
-
-
-            // and then by type
-            //var result = DAL.DAL_PRODUCT_JOIN_PICTURE.SelectAll();
-
-            // filter result by name
-            /*var result2 = from p in result
-                          where p.PRODUCT_NAME == name
-                          select p;*/
-
-            //Console.WriteLine(result2.Where(p => p.PRODUCT_NAME == name).ToList()[0]);
-
-
-            foreach (var item in result)
-            {
-                Console.WriteLine(item.PRODUCT_NAME);
-            }
-
-            Console.Read();
+            Console.ReadLine();
+   
 
         }
 
