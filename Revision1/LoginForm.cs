@@ -38,5 +38,10 @@ namespace Revision1
         {
 
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = label1;
+        }
     }
 }

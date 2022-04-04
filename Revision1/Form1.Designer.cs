@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButtonSandBox = new FontAwesome.Sharp.IconButton();
             this.iconButtonSections = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButtonEtudiants = new FontAwesome.Sharp.IconButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButtonSandBox = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(212, 798);
             this.panel1.TabIndex = 0;
+            // 
+            // iconButtonSandBox
+            // 
+            this.iconButtonSandBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonSandBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonSandBox.IconChar = FontAwesome.Sharp.IconChar.ThumbsUp;
+            this.iconButtonSandBox.IconColor = System.Drawing.Color.Black;
+            this.iconButtonSandBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonSandBox.IconSize = 36;
+            this.iconButtonSandBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonSandBox.Location = new System.Drawing.Point(0, 104);
+            this.iconButtonSandBox.Name = "iconButtonSandBox";
+            this.iconButtonSandBox.Size = new System.Drawing.Size(212, 52);
+            this.iconButtonSandBox.TabIndex = 3;
+            this.iconButtonSandBox.Text = "SandBox";
+            this.iconButtonSandBox.UseVisualStyleBackColor = true;
+            this.iconButtonSandBox.Click += new System.EventHandler(this.iconButtonSandBox_Click);
             // 
             // iconButtonSections
             // 
@@ -126,23 +143,6 @@
             this.panel2.Size = new System.Drawing.Size(1161, 798);
             this.panel2.TabIndex = 1;
             // 
-            // iconButtonSandBox
-            // 
-            this.iconButtonSandBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButtonSandBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonSandBox.IconChar = FontAwesome.Sharp.IconChar.ThumbsUp;
-            this.iconButtonSandBox.IconColor = System.Drawing.Color.Black;
-            this.iconButtonSandBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonSandBox.IconSize = 36;
-            this.iconButtonSandBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSandBox.Location = new System.Drawing.Point(0, 104);
-            this.iconButtonSandBox.Name = "iconButtonSandBox";
-            this.iconButtonSandBox.Size = new System.Drawing.Size(212, 52);
-            this.iconButtonSandBox.TabIndex = 3;
-            this.iconButtonSandBox.Text = "SandBox";
-            this.iconButtonSandBox.UseVisualStyleBackColor = true;
-            this.iconButtonSandBox.Click += new System.EventHandler(this.iconButtonSandBox_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +150,7 @@
             this.ClientSize = new System.Drawing.Size(1373, 798);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
