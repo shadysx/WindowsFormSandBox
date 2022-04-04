@@ -16,27 +16,15 @@ namespace Revision1
         public DisplayProducts()
         {
             InitializeComponent();
-            
-            var result = DAL.DAL_PRODUCT.SelectAll();
 
-            Label[] labels = new Label[result.Count];
-            PictureBox[] pictureBoxes = new PictureBox[result.Count];
-
-            for (int i = 0; i < result.Count; i++)
-            { 
-                labels[i] = new Label();
-                labels[i].Text = result[i].PRODUCT_NAME;
-                labels[i].Location = new Point(0, i * 15);
-                labels[i].Size = new Size(100, 15);
-                this.Controls.Add(labels[i]);
-                pictureBoxes[i] = new PictureBox();
-                pictureBoxes[i].ImageLocation = "https://media.ldlc.com/r374/ld/products/00/05/92/87/LD0005928757_1.jpg";
-                pictureBoxes[i].Location = new Point(150, i * 50);
-                pictureBoxes[i].Size = new Size(100, 100);
-                pictureBoxes[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                this.Controls.Add(pictureBoxes[i]);
-                
-            }
+            this.dataGridView1.DataSource = DAL.DAL_PRODUCT_JOIN_PICTURE.SelectAll();
+            dataGridView1.RowsDefaultCellStyle.SelectionBackColor = System.Drawing.Color.Transparent;
         }
-    }
+
+        private void DisplayProducts_Load(object sender, EventArgs e)
+        {
+            this.dataGridView1.ClearSelection();
+        }
+
+   }
 }
